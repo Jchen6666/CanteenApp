@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jerrychen.canteenapp.DishActivity">
+
+    <ImageView
+        android:id="@+id/PHOTO"
+        android:layout_width="300dp"
+        android:layout_height="200dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DESCRIPTION"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/WEIGHT"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Energy"
+        android:id="@+id/ENERGY"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/ENERGY"
+        android:id="@+id/SPINNER"
+        >
+    </Spinner>
+
+    </RelativeLayout>
+
+    <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/RESULT"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <RatingBar
+        android:id="@+id/Rating"
+        android:layout_width="241dp"
+        android:layout_height="wrap_content"
+        android:numStars="10"
+        android:rating="4"
+        android:stepSize="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Mean_Rating"
+            android:layout_toRightOf="@+id/Rating"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:layout_toRightOf="@+id/Mean_Rating"
+            android:onClick="ButtonClicked"
+            android:text="Rating"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order"
+        android:onClick="ButtonClickedOrder"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Receipt"/>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Canteen App</string>
+    <string-array name="energy_items">
+        <item>Carbohydrates</item>
+        <item>Energy</item>
+        <item>Fat</item>
+        <item>Protein</item>
+    </string-array>
+</resources>
