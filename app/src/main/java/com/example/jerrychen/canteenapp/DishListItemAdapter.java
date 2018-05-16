@@ -51,7 +51,7 @@ public class DishListItemAdapter extends ArrayAdapter<Dish>{
 
         titleview.setText(title);
         descriptionview.setText(description);
-        priceview.setText("DKK"+price);
+        priceview.setText(" DKK"+price);
 
         return dishView ;
     }

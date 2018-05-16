@@ -44,11 +44,11 @@ public class RatingTask extends AsyncTask<String,Void,CharSequence> {
         } catch (MalformedURLException ex) {
             cancel(true);
             String message = ex.getMessage() + " " + urlString;
-            Log.e("Rating", message);
+            //Log.e("Rating", message);
             return message;
         } catch (IOException ex) {
             cancel(true);
-            Log.e("Rating", ex.getMessage());
+            //Log.e("Rating", ex.getMessage());
             return ex.getMessage();
         }
     }

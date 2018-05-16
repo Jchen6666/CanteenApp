@@ -3,8 +3,6 @@ package com.example.jerrychen.canteenapp;
 import android.content.Intent;
 import android.os.Parcelable;
 import android.support.annotation.RequiresPermission;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,7 +23,7 @@ import java.util.List;
 public class MainActivity extends Activity {
 
   int userId;
-
+    Dish dish;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +67,7 @@ public class MainActivity extends Activity {
                     String description = obj.getString("Description");
                     String pictureurl = obj.getString("PictureUrl");
                     String title = obj.getString("Title");
-                    Dish dish = new Dish(id, alcohol, carbohydrates, energy, fat, price, protein, weight, description, pictureurl, title);
+                     dish = new Dish(id, alcohol, carbohydrates, energy, fat, price, protein, weight, description, pictureurl, title);
                     dishes.add(dish);
                 }
                 ListView listView = (ListView) findViewById(R.id.main_dishes_listview);
@@ -85,6 +83,7 @@ public class MainActivity extends Activity {
 
                         intent.putExtra("DISH", dishes.get((int)id));
                         intent.putExtra("USERID",userId);
+                        intent.putExtra("dish",dish);
 
 
                         startActivity(intent);
